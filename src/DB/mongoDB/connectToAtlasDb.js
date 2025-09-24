@@ -1,15 +1,12 @@
 const mongoose = require("mongoose");
 const chalk = require("chalk");
-const config = require("config");
+require("dotenv").config();
 
-const userName = config.get("DB_NAME");
-const password = config.get("DB_PASSWORD");
+const mongoConnection = process.env.MONGO_CONNECTION;
 
 mongoose
-  .connect(
-    `mongodb+srv://${userName}:${password}@hackeru-cluster.y5spzbw.mongodb.net/`
-  )
+  .connect(mongoConnection)
   .then(() => console.log(chalk.magentaBright("Connect To Atlas MongoDB!")))
-  .catch((error) => {
+  .catch(error => {
     console.log(chalk.redBright(error));
   });
