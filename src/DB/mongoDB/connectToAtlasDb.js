@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const chalk = require("chalk");
 require("dotenv").config();
 
-const mongoConnection = process.env.MONGO_CONNECTION;
+const mongoConnection = process.env.MONGODB_URI;
 
 mongoose
   .connect(mongoConnection)
