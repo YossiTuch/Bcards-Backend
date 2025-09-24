@@ -1,0 +1,9 @@
+{
+  "NODE_ENV": "production",
+  "PORT": 9191,
+  "TOKEN_GENERATOR": "jwt",
+  "DB_NAME": "elirandagan123",
+  "DB_PASSWORD": "Dagan123",
+  "LOGGER": "morgan",
+  "DB": "MONGODB"
+}
