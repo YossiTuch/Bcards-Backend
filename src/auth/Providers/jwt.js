@@ -2,7 +2,6 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const key = process.env.JWT_KEY;
-console.log(key)
 
 const generateAuthToken = user => {
   const { _id, isAdmin, isBusiness } = user;
